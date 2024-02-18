@@ -11,4 +11,5 @@ export const webRoutes = [
 
   { method: "GET", path: "/dashboard", config: dashboardController.index },
   { method: "POST", path: "/dashboard/addcountry", config: dashboardController.addCountry },
+  { method: "GET", path: "/dashboard/deletecountry/{id}", config: dashboardController.deleteCountry },
 ];

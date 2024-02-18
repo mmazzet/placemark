@@ -25,4 +25,12 @@ export const dashboardController = {
       return h.redirect("/dashboard");
     },
   },
+
+  deleteCountry: {
+    handler: async function (request, h) {
+      const country = await db.countryStore.getCountryById(request.params.id);
+      await db.countryStore.deleteCountryById(country._id);
+      return h.redirect("/dashboard");
+    },
+  },
 };
