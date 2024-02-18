@@ -4,10 +4,11 @@ import Handlebars from "handlebars";
 import path from "path";
 import { fileURLToPath } from "url";
 import Cookie from "@hapi/cookie";
+import dotenv from "dotenv";
+import Joi from "joi";
 import { webRoutes } from "./web-routes.js";
 import { db } from "./models/db.js";
 import { accountsController } from "./controllers/accounts-controller.js";
-import dotenv from "dotenv";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -40,6 +41,7 @@ async function init() {
     validate: accountsController.validate,
   });
   server.auth.default("session");
+  server.validator(Joi);
 
   db.init();
   server.route(webRoutes);
