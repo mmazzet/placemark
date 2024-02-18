@@ -6,6 +6,13 @@
       "email": "homer@simpson.com",
       "password": "secret",
       "_id": "d0bfe74d-20bf-47f1-bb52-d9cee9ab7c3a"
+    },
+    {
+      "firstName": "Homer2",
+      "lastName": "Simpson2",
+      "email": "homer2@simpson2.com",
+      "password": "secret",
+      "_id": "626f3cb4-89d5-488e-b090-8ec1c052e2b1"
     }
   ],
   "countries": [
