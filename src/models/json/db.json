@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "_id": "d0bfe74d-20bf-47f1-bb52-d9cee9ab7c3a"
+    }
+  ],
+  "countries": [
+    {
+      "userid": "d0bfe74d-20bf-47f1-bb52-d9cee9ab7c3a",
+      "title": "Australia",
+      "_id": "4465a8c2-067b-4f5d-b6de-46c6936cb874"
+    },
+    {
+      "userid": "d0bfe74d-20bf-47f1-bb52-d9cee9ab7c3a",
+      "title": "Zambia",
+      "_id": "79ddf229-a961-444f-aa0b-74ae4fcf4d2a"
+    }
+  ]
+}
