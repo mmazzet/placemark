@@ -26,18 +26,48 @@ export const testUsers = [
   }
 ];
 
-export const mozart = {
-  title: "Mozart Favourites"
+export const sampleCountry = {
+  title: "Italy"
 };
 
 export const testCountries = [
   {
-    title: "Beethoven Sonatas"
+    title: "Ireland"
   },
   {
-    title: "Beethoven Concertos"
+    title: "France"
   },
   {
-    title: "Beethoven Symphonies"
+    title: "Portugal"
   }
 ];
+
+export const sampleMarket = {
+  title: "Mercato Porta Genova Milano",
+  description: "Market in Milan",
+  location: 45.4641
+};
+
+export const portugal = {
+  title: "Mercado de Lisboa",
+};
+
+
+
+export const testMarkets = [
+  {
+    title: "Mercato Porta Genova Milano",
+    description: "Food market in Milan",
+    location: 45.4551
+  },
+  {
+    title: "Mercato di Rialto",
+    description: "Fish market in Venice",
+    location: 45.4387
+  },
+  {
+    title: "Mercado de San Miguel",
+    description: "Market in Madrid",
+    location: 40.4155
+  }
+]

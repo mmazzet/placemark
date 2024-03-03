@@ -1,30 +1,33 @@
-<table class="table is-fullwidth">
-  <thead>
-    <tr>
-      <th>Market</th>
-      <th>Description</th>
-      <th>Location</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each country.markets}}
-      <tr>
-        <td>
-          {{title}}
-        </td>
-        <td>
-          {{description}}
-        </td>
-        <td>
-          {{location}}
-        </td>
-        <td>
-          <a href="/country/{{../country._id}}/deletemarket/{{_id}}" class="ui icon button">
-            <i class="fas fa-trash"></i>
+<div class="columns is-multiline">
+  {{#each country.markets}}
+    <div class="column is-one-third">
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <p><strong>Market:</strong> {{title}}</p>
+            <p><strong>Description:</strong></p>
+            <p class="description">{{description}}</p>
+            <p><strong>Location:</strong> {{location}}</p>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <a href="/country/{{../country._id}}/editmarket/{{_id}}" class="card-footer-item button is-info">
+            <span class="icon">
+              <i class="fas fa-edit"></i>
+            </span>
+            <span>Edit</span>
           </a>
-        </td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+          <a href="/country/{{../country._id}}/deletemarket/{{_id}}" class="card-footer-item button is-danger">
+            <span class="icon">
+              <i class="fas fa-trash"></i>
+            </span>
+            <span>Delete</span>
+          </a>
+        </footer>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+
+

@@ -25,11 +25,11 @@ export const dashboardController = {
     },
     handler: async function (request, h) {
       const loggedInUser = request.auth.credentials;
-      const newPlayList = {
+      const newCountry = {
         userid: loggedInUser._id,
         title: request.payload.title,
       };
-      await db.countryStore.addCountry(newPlayList);
+      await db.countryStore.addCountry(newCountry);
       return h.redirect("/dashboard");
     },
   },

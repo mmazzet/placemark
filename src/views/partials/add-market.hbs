@@ -1,17 +1,44 @@
-<form class="box" action="/country/{{country._id}}/addmarket" method="POST">
-  <label>Enter Market Details:</label>
-  <div class="field is-horizontal">
-    <div class="field-body">
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter Market Name" name="title">
-      </div>
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter Description" name="description">
-      </div>
-      <div class="field">
-        <input class="input" type="text" placeholder="Enter Location" name="location">
+<div class="container">
+  <div class="columns is-centered">
+    <div class="column is-half">
+      <div class="box has-background-info">
+        <form action="/country/{{country._id}}/addmarket" method="POST">
+          <h2 class="title is-4 has-text-white">Enter Market Details:</h2>
+          
+          <div class="field">
+            <label class="label">Market Name</label>
+            <div class="control">
+              <input class="input is-medium" type="text" placeholder="Enter Market Name" name="title">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Description</label>
+            <div class="control">
+              <input class="input is-medium" type="text" placeholder="Enter Description" name="description">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Location</label>
+            <div class="control">
+              <input class="input is-medium" type="text" placeholder="Enter Location" name="location">
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-primary is-medium">Add Market</button>
+            </div>
+            <div class="control">
+              <button class="button is-light is-medium">Cancel</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-  <button class="button is-primary">Add Market</button>
-</form>
+</div>
+
+
+
