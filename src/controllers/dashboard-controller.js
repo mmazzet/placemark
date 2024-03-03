@@ -1,5 +1,5 @@
-import { db } from "../models/db.js";
 import { CountrySpec } from "../models/joi-schemas.js";
+import { db } from "../models/db.js";
 
 export const dashboardController = {
   index: {
@@ -25,11 +25,11 @@ export const dashboardController = {
     },
     handler: async function (request, h) {
       const loggedInUser = request.auth.credentials;
-      const newCountry = {
+      const newPlayList = {
         userid: loggedInUser._id,
         title: request.payload.title,
       };
-      await db.countryStore.addCountry(newCountry);
+      await db.countryStore.addCountry(newPlayList);
       return h.redirect("/dashboard");
     },
   },

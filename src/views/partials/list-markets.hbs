@@ -1,0 +1,30 @@
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>Market</th>
+      <th>Description</th>
+      <th>Location</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each country.markets}}
+      <tr>
+        <td>
+          {{title}}
+        </td>
+        <td>
+          {{description}}
+        </td>
+        <td>
+          {{location}}
+        </td>
+        <td>
+          <a href="/country/{{../country._id}}/deletemarket/{{_id}}" class="ui icon button">
+            <i class="fas fa-trash"></i>
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

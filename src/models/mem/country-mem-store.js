@@ -1,4 +1,5 @@
 import { v4 } from "uuid";
+import { marketMemStore } from "./market-mem-store.js";
 
 let countries = [];
 
@@ -14,7 +15,9 @@ export const countryMemStore = {
   },
 
   async getCountryById(id) {
-    return countries.find((country) => country._id === id);
+    const list = countries.find((country) => country._id === id);
+    list.markets = await marketMemStore.getMarketsByCountryId(list._id);
+    return list;
   },
 
   async getUserCountries(userid) {

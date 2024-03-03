@@ -1,6 +1,6 @@
 import { v4 } from "uuid";
 import { db } from "./store-utils.js";
-// import { trackJsonStore } from "./track-json-store.js";
+import { marketJsonStore } from "./market-json-store.js";
 
 export const countryJsonStore = {
   async getAllCountries() {
@@ -18,8 +18,12 @@ export const countryJsonStore = {
 
   async getCountryById(id) {
     await db.read();
-    const list = db.data.countries.find((country) => country._id === id);
-    // list.tracks = await trackJsonStore.getTracksByPlaylistId(list._id);
+    let list = db.data.countries.find((country) => country._id === id);
+    if (list) {
+      list.markets = await marketJsonStore.getMarketsByCountryId(list._id);
+    } else {
+      list = null;
+    }
     return list;
   },
 
@@ -31,7 +35,7 @@ export const countryJsonStore = {
   async deleteCountryById(id) {
     await db.read();
     const index = db.data.countries.findIndex((country) => country._id === id);
-    db.data.countries.splice(index, 1);
+    if (index !== -1) db.data.countries.splice(index, 1);
     await db.write();
   },
 

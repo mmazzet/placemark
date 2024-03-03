@@ -1,18 +1,17 @@
-import { db } from "../models/db.js";
 import { UserSpec, UserCredentialsSpec } from "../models/joi-schemas.js";
-
+import { db } from "../models/db.js";
 
 export const accountsController = {
   index: {
     auth: false,
     handler: function (request, h) {
-      return h.view("main", { title: "Welcome to Placemark" });
+      return h.view("main", { title: "Welcome to Flea Markets" });
     },
   },
   showSignup: {
     auth: false,
     handler: function (request, h) {
-      return h.view("signup-view", { title: "Sign up for Placemark" });
+      return h.view("signup-view", { title: "Sign up for Flea Markets" });
     },
   },
   signup: {
@@ -33,7 +32,7 @@ export const accountsController = {
   showLogin: {
     auth: false,
     handler: function (request, h) {
-      return h.view("login-view", { title: "Login to Placemark" });
+      return h.view("login-view", { title: "Login to Flea Markets" });
     },
   },
   login: {
@@ -56,7 +55,6 @@ export const accountsController = {
     },
   },
   logout: {
-    auth: false,
     handler: function (request, h) {
       request.cookieAuth.clear();
       return h.redirect("/");
@@ -68,6 +66,6 @@ export const accountsController = {
     if (!user) {
       return { isValid: false };
     }
-    return {isValid: true, credentials: user };
+    return { isValid: true, credentials: user };
   },
 };

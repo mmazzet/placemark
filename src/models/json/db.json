@@ -1,20 +1,39 @@
 {
-  "users": [],
+  "users": [
+    {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "_id": "e01bfd8e-f19c-4c3f-be3e-cc5a700fae5f"
+    },
+    {
+      "firstName": "Marge",
+      "lastName": "Simpson",
+      "email": "marge@simpson.com",
+      "password": "secret",
+      "_id": "fcbcbc06-0507-4117-a4f1-3342abaa2201"
+    },
+    {
+      "firstName": "Bart",
+      "lastName": "Simpson",
+      "email": "bart@simpson.com",
+      "password": "secret",
+      "_id": "9cde822f-530e-49ca-a2e6-a57c725f2614"
+    }
+  ],
   "countries": [
     {
-      "userid": "d0bfe74d-20bf-47f1-bb52-d9cee9ab7c3a",
-      "title": "Australia",
-      "_id": "4465a8c2-067b-4f5d-b6de-46c6936cb874"
+      "title": "Beethoven Sonatas",
+      "_id": "44fe381d-8bcf-4b3f-b7c8-5639e892bbc8"
     },
     {
-      "userid": "d0bfe74d-20bf-47f1-bb52-d9cee9ab7c3a",
-      "title": "Zambia",
-      "_id": "79ddf229-a961-444f-aa0b-74ae4fcf4d2a"
+      "title": "Beethoven Concertos",
+      "_id": "d72f2c77-ad66-47fc-991d-8faecfd56f44"
     },
     {
-      "userid": "d0bfe74d-20bf-47f1-bb52-d9cee9ab7c3a",
-      "title": "new",
-      "_id": "9c129643-b75a-41da-a193-34db089352de"
+      "title": "Beethoven Symphonies",
+      "_id": "55eddec4-7cb5-4c34-92f8-376c2e9eb629"
     }
   ]
 }

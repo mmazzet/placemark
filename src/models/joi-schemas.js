@@ -12,11 +12,11 @@ export const UserCredentialsSpec = {
   password: Joi.string().required(),
 };
 
-/* export const TrackSpec = {
+export const MarketSpec = {
   title: Joi.string().required(),
-  artist: Joi.string().required(),
-  duration: Joi.number().allow("").optional(),
-}; */
+  description: Joi.string().required(),
+  location: Joi.number().allow("").optional(),
+}; 
 
 export const CountrySpec = {
   title: Joi.string().required(),
