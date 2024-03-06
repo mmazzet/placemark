@@ -46,6 +46,7 @@ export const marketMemStore = {
   async updateMarket(market, updatedMarket) {
     market.title = updatedMarket.title;
     market.description = updatedMarket.description;
-    market.location = updatedMarket.location;
+    market.latitude = updatedMarket.latitude;
+    market.longitude = updatedMarket.longitude;
   },
 };

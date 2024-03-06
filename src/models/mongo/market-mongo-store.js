@@ -43,7 +43,8 @@ export const marketMongoStore = {
     const marketDoc = await Market.findOne({ _id: market._id });
     marketDoc.title = updatedMarket.title;
     marketDoc.description = updatedMarket.description;
-    marketDoc.location = updatedMarket.location;
+    marketDoc.latitude = updatedMarket.latitude;
+    marketDoc.longitude = updatedMarket.longitude;
     await marketDoc.save();
   },
 };

@@ -26,7 +26,8 @@ export const countryController = {
       const newMarket = {
         title: request.payload.title,
         description: request.payload.description,
-        location: Number(request.payload.location),
+        latitude: Number(request.payload.latitude),
+        longitude: Number(request.payload.longitude),
       };
       await db.marketStore.addMarket(country._id, newMarket);
       return h.redirect(`/country/${country._id}`);

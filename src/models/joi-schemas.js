@@ -15,7 +15,8 @@ export const UserCredentialsSpec = {
 export const MarketSpec = {
   title: Joi.string().required(),
   description: Joi.string().required(),
-  location: Joi.number().allow("").optional(),
+  latitude: Joi.number().allow("").optional(),
+  longitude: Joi.number().allow("").optional(),
 }; 
 
 export const CountrySpec = {
