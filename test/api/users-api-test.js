@@ -1,5 +1,5 @@
 import { assert } from "chai";
-import { placemarkService } from "../placemark-service.js";
+import { placemarkService } from "./placemark-service.js";
 import { assertSubset } from "../test-utils.js";
 import { maggie, testUsers } from "../fixtures.js";
 

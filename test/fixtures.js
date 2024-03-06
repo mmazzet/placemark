@@ -45,8 +45,8 @@ export const testCountries = [
 ];
 
 export const sampleMarket = {
-  title: "Mercato Porta Genova Milano",
-  description: "Market in Milan",
+  title: "Fiera di Sinigaglia",
+  description: "The oldest flea market in Milan",
   location: 45.4641
 };
 
@@ -58,18 +58,18 @@ export const portugal = {
 
 export const testMarkets = [
   {
-    title: "Mercato Porta Genova Milano",
-    description: "Food market in Milan",
+    title: "East Market Milano",
+    description: "Renowned market held in Milan",
     location: 45.4551
   },
   {
-    title: "Mercato di Rialto",
-    description: "Fish market in Venice",
+    title: "Mercatino dell'antiquariato di Brera",
+    description: "Renowned market held in Milan",
     location: 45.4387
   },
   {
-    title: "Mercado de San Miguel",
-    description: "Market in Madrid",
+    title: "Mercatone Antiquariato Naviglio Grande",
+    description: "Renowned market held in Milan",
     location: 40.4155
   }
 ]
