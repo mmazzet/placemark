@@ -1,9 +1,22 @@
 {{> menu}}
 
-<section class="section">
+{{!-- <section class="section">
   <div class="title">
     {{country.title}}
   </div>
   {{> list-markets}}
   {{> add-market}}
+</section> --}}
+
+<section class="section columns is-vcentered">
+  <div class="column has-text-centered">
+    <div class="title">
+      {{country.title}}
+    </div>
+    {{> list-markets}}
+    {{> add-market}}
+  </div>
+  <div class="column">
+    {{> country-image }}
+  </div>
 </section>
