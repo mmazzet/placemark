@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node src/server.js",
     "lint": "eslint . --ext .js",
-    "test": "mocha --ui tdd test/**/*.js -exit"
+    "test": "mocha --ui tdd test/**/*.js -exit",
+    "testmodels": "mocha --ui tdd test/models/**/*.js -exit",
+    "testapi": "mocha --ui tdd test/api/**/*.js -exit"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +26,7 @@
     "@hapi/boom": "^10.0.1",
     "@hapi/cookie": "^12.0.1",
     "@hapi/hapi": "^21.3.2",
+    "@hapi/inert": "^7.1.0",
     "@hapi/vision": "^7.0.3",
     "dotenv": "^16.4.4",
     "handlebars": "^4.7.8",
@@ -32,5 +35,8 @@
     "mongoose": "^8.2.0",
     "readme-md-generator": "^1.0.0",
     "uuid": "^9.0.1"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
