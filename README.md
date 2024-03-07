@@ -6,7 +6,20 @@
   </a>
 </p>
 
-> Placemark: a Hapi/node application for managing Flea Markets Placemarks
+> Placemark: a Hapi/node application for managing Flea Markets Placemarks. Create lists of flea markets you want to visit around Europe and save information for each of them.
+
+## Tools used
+- node.js
+- Bulma
+- Handlebars
+- Hapi
+- Joi
+- Chai
+- Mocha
+
+## Screenshots
+
+## Deployment
 
 ## Install
 
@@ -26,9 +39,6 @@ npm run start
 npm run test
 ```
 
-## Show your support
-
-Give a ⭐️ if this project helped you!
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

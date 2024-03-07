@@ -20,4 +20,8 @@ export const webRoutes = [
   { method: "GET", path: "/country/{id}", config: countryController.index },
   { method: "POST", path: "/country/{id}/addmarket", config: countryController.addMarket },
   { method: "GET", path: "/country/{id}/deletemarket/{marketid}", config: countryController.deleteMarket },
+
+  { method: "GET", path: "/showaccountdetails/{id}", config: accountsController.showAccountDetails },
+  { method: "POST", path: "/updateaccountdetails/{id}", config: accountsController.updateAccountDetails },
+  { method: "GET", path: "/deleteaccount/{id}", config: accountsController.deleteAccount },
 ];

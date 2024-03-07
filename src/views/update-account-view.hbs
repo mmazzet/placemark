@@ -1,0 +1,46 @@
+{{> menu active="showaccountdetails"}}
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <div class="box">
+          <h1 class="title has-text-centered">Update Your Account Details</h1>
+          <form action="/updateaccountdetails/{{user._id}}" method="POST">
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Enter Name" name="firstName" required>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Last Name</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Enter Last Name" name="lastName" required>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Enter email" name="email" required>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Password</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Enter Password" name="password" required>
+              </div>
+            </div>
+            <div class="field is-grouped is-grouped-centered">
+              <div class="control">
+                <button class="button is-primary">Update Account Details</button>
+              </div>
+              <div class="control">
+                <a href="/deleteaccount/{{user._id}}" class="button is-danger">Delete Account</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
