@@ -5,7 +5,9 @@ import { validationError } from "./logger.js";
 
 export const countryApi = {
   find: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         const countries = await db.countryStore.getAllCountries();
@@ -21,7 +23,9 @@ export const countryApi = {
   },
 
   findOne: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     async handler(request) {
       try {
         const country = await db.countryStore.getCountryById(request.params.id);
@@ -41,7 +45,9 @@ export const countryApi = {
   },
 
   create: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         const country = request.payload;
@@ -62,7 +68,9 @@ export const countryApi = {
   },
 
   deleteOne: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         const country = await db.countryStore.getCountryById(request.params.id);

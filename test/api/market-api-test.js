@@ -8,10 +8,14 @@ suite("Market API tests", () => {
   let milanMarkets = null;
 
   setup(async () => {
-    await placemarkService.deleteAllCountries();
-    await placemarkService.deleteAllUsers();
-    await placemarkService.deleteAllMarkets();
+    placemarkService.clearAuth();
     user = await placemarkService.createUser(maggie);
+    await placemarkService.authenticate(maggie);
+    await placemarkService.deleteAllCountries();
+    await placemarkService.deleteAllMarkets();
+    await placemarkService.deleteAllUsers();
+    user = await placemarkService.createUser(maggie);
+    await placemarkService.authenticate(maggie);
     sampleCountry.userid = user._id;
     milanMarkets = await placemarkService.createCountry(sampleCountry);
   });

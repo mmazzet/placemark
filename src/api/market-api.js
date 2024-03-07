@@ -5,7 +5,9 @@ import { validationError } from "./logger.js";
 
 export const marketApi = {
   find: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         const markets = await db.marketStore.getAllMarkets();
@@ -21,7 +23,9 @@ export const marketApi = {
   },
 
   findOne: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     async handler(request) {
       try {
         const market = await db.marketStore.getMarketById(request.params.id);
@@ -41,7 +45,9 @@ export const marketApi = {
   },
 
   create: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         const market = await db.marketStore.addMarket(request.params.id, request.payload);
@@ -61,7 +67,9 @@ export const marketApi = {
   },
 
   deleteAll: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         await db.marketStore.deleteAllMarkets();
@@ -75,7 +83,9 @@ export const marketApi = {
   },
 
   deleteOne: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         const market = await db.marketStore.getMarketById(request.params.id);

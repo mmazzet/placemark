@@ -10,9 +10,13 @@ suite("Country API tests", () => {
   let user = null;
 
   setup(async () => {
+    placemarkService.clearAuth();
+    user = await placemarkService.createUser(maggie);
+    await placemarkService.authenticate(maggie);
     await placemarkService.deleteAllCountries();
     await placemarkService.deleteAllUsers();
     user = await placemarkService.createUser(maggie);
+    await placemarkService.authenticate(maggie);
     sampleCountry.userid = user._id;
   });
 
