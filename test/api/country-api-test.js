@@ -49,7 +49,7 @@ suite("Country API tests", () => {
     assert.equal(returnedLists.length, 0);
   });
 
-  test("remove non-existant country", async () => {
+  test("remove non-existent country", async () => {
     try {
       const response = await placemarkService.deleteCountry("not an id");
       assert.fail("Should not return a response");
