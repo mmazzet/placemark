@@ -1,6 +1,6 @@
 import Boom from "@hapi/boom";
 import { db } from "../models/db.js";
-import { IdSpec, MarketSpec, MarketArraySpec } from "../models/joi-schemas.js";
+import { IdSpec, MarketSpec, MarketSpecPlus, MarketArraySpec } from "../models/joi-schemas.js";
 import { validationError } from "./logger.js";
 
 export const marketApi = {
@@ -37,7 +37,7 @@ export const marketApi = {
     description: "Find a Market",
     notes: "Returns a market",
     validate: { params: { id: IdSpec }, failAction: validationError },
-    response: { schema: MarketSpec, failAction: validationError },
+    response: { schema: MarketSpecPlus, failAction: validationError },
   },
 
   create: {
@@ -57,7 +57,7 @@ export const marketApi = {
     description: "Create a market",
     notes: "Returns the newly created market",
     validate: { payload: MarketSpec },
-    response: { schema: MarketSpec, failAction: validationError },
+    response: { schema: MarketSpecPlus, failAction: validationError },
   },
 
   deleteAll: {

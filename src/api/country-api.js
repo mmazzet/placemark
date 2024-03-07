@@ -1,5 +1,5 @@
 import Boom from "@hapi/boom";
-import { IdSpec, CountrySpec, CountryArraySpec } from "../models/joi-schemas.js";
+import { IdSpec, CountrySpec, CountryArraySpec, CountrySpecPlus } from "../models/joi-schemas.js";
 import { db } from "../models/db.js";
 import { validationError } from "./logger.js";
 
@@ -37,7 +37,7 @@ export const countryApi = {
     description: "Find a Country",
     notes: "Returns a country",
     validate: { params: { id: IdSpec }, failAction: validationError },
-    response: { schema: CountrySpec, failAction: validationError },
+    response: { schema: CountrySpecPlus, failAction: validationError },
   },
 
   create: {
@@ -58,7 +58,7 @@ export const countryApi = {
     description: "Create a Country",
     notes: "Returns the newly created country",
     validate: { payload: CountrySpec, failAction: validationError },
-    response: { schema: CountrySpec, failAction: validationError },
+    response: { schema: CountrySpecPlus, failAction: validationError },
   },
 
   deleteOne: {
