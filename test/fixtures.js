@@ -28,6 +28,11 @@ export const testUsers = [
   }
 ];
 
+export const maggieCredentials = {
+  email: "maggie@simpson.com",
+  password: "secret"
+};
+
 export const sampleCountry = {
   title: "Italy"
 };
