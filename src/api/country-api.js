@@ -1,6 +1,7 @@
 import Boom from "@hapi/boom";
-import { CountrySpec } from "../models/joi-schemas.js";
+import { IdSpec, CountrySpec, CountryArraySpec } from "../models/joi-schemas.js";
 import { db } from "../models/db.js";
+import { validationError } from "./logger.js";
 
 export const countryApi = {
   find: {
@@ -13,6 +14,10 @@ export const countryApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
+    tags: ["api"],
+    response: { schema: CountryArraySpec, failAction: validationError },
+    description: "Get all countries",
+    notes: "Returns all countries",
   },
 
   findOne: {
@@ -28,6 +33,11 @@ export const countryApi = {
         return Boom.serverUnavailable("No Country with this id");
       }
     },
+    tags: ["api"],
+    description: "Find a Country",
+    notes: "Returns a country",
+    validate: { params: { id: IdSpec }, failAction: validationError },
+    response: { schema: CountrySpec, failAction: validationError },
   },
 
   create: {
@@ -44,6 +54,11 @@ export const countryApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
+    tags: ["api"],
+    description: "Create a Country",
+    notes: "Returns the newly created country",
+    validate: { payload: CountrySpec, failAction: validationError },
+    response: { schema: CountrySpec, failAction: validationError },
   },
 
   deleteOne: {
@@ -60,6 +75,9 @@ export const countryApi = {
         return Boom.serverUnavailable("No Country with this id");
       }
     },
+    tags: ["api"],
+    description: "Delete a country",
+    validate: { params: { id: IdSpec }, failAction: validationError },
   },
 
   deleteAll: {
@@ -72,5 +90,7 @@ export const countryApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
+    tags: ["api"],
+    description: "Delete all CountryApi",
   },
 };

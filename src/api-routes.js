@@ -16,7 +16,7 @@ export const apiRoutes = [
 
   { method: "GET", path: "/api/markets", config: marketApi.find },
   { method: "GET", path: "/api/markets/{id}", config: marketApi.findOne },
-  { method: "POST", path: "/api/playlists/{id}/markets", config: marketApi.create },
+  { method: "POST", path: "/api/countries/{id}/markets", config: marketApi.create },
   { method: "DELETE", path: "/api/markets", config: marketApi.deleteAll },
   { method: "DELETE", path: "/api/markets/{id}", config: marketApi.deleteOne },
 ];

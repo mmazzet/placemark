@@ -52,7 +52,7 @@ suite("Market API tests", () => {
     assert.equal(returnedMarkets.length, 0);
   });
 
-  test("denormalised playlist", async () => {
+  test("denormalised country", async () => {
     for (let i = 0; i < testMarkets.length; i += 1) {
       // eslint-disable-next-line no-await-in-loop
       await placemarkService.createMarket(milanMarkets._id, testMarkets[i]);

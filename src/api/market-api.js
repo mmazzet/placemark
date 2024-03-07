@@ -1,5 +1,7 @@
 import Boom from "@hapi/boom";
 import { db } from "../models/db.js";
+import { IdSpec, MarketSpec, MarketArraySpec } from "../models/joi-schemas.js";
+import { validationError } from "./logger.js";
 
 export const marketApi = {
   find: {
@@ -12,6 +14,10 @@ export const marketApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
+    tags: ["api"],
+    response: { schema: MarketArraySpec, failAction: validationError },
+    description: "Get all marketApi",
+    notes: "Returns all marketApi",
   },
 
   findOne: {
@@ -27,6 +33,11 @@ export const marketApi = {
         return Boom.serverUnavailable("No market with this id");
       }
     },
+    tags: ["api"],
+    description: "Find a Market",
+    notes: "Returns a market",
+    validate: { params: { id: IdSpec }, failAction: validationError },
+    response: { schema: MarketSpec, failAction: validationError },
   },
 
   create: {
@@ -42,6 +53,11 @@ export const marketApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
+    tags: ["api"],
+    description: "Create a market",
+    notes: "Returns the newly created market",
+    validate: { payload: MarketSpec },
+    response: { schema: MarketSpec, failAction: validationError },
   },
 
   deleteAll: {
@@ -54,6 +70,8 @@ export const marketApi = {
         return Boom.serverUnavailable("Database Error");
       }
     },
+    tags: ["api"],
+    description: "Delete all marketApi",
   },
 
   deleteOne: {
@@ -70,5 +88,8 @@ export const marketApi = {
         return Boom.serverUnavailable("No Market with this id");
       }
     },
+    tags: ["api"],
+    description: "Delete a market",
+    validate: { params: { id: IdSpec }, failAction: validationError },
   },
 };

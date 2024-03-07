@@ -21,12 +21,25 @@ export const UserCredentialsSpec = {
 };
 
 export const MarketSpec = {
-  title: Joi.string().required(),
-  description: Joi.string().required(),
-  latitude: Joi.number().allow("").optional(),
-  longitude: Joi.number().allow("").optional(),
+  title: Joi.string().example("East Market Milano").required(),
+  description: Joi.string().example("Renowned market held in Milan").required(),
+  latitude: Joi.number().allow("").optional().example("45.4551"),
+  longitude: Joi.number().allow("").optional().example("9.1805"),
+  countryid: IdSpec,
+  _id: IdSpec,
+  __v: Joi.number(),
 }; 
 
-export const CountrySpec = {
-  title: Joi.string().required(),
-};
+export const MarketArraySpec = Joi.array().items(MarketSpec).label("MarketArray");
+
+export const CountrySpec = Joi.object()
+  .keys({
+    title: Joi.string().required().example("Milan Markets"),
+    userid: IdSpec,
+    markets: MarketArraySpec,
+    _id: IdSpec,
+    __v: Joi.number(),
+  })
+  .label("Country");
+
+  export const CountryArraySpec = Joi.array().items(CountrySpec).label("CountryArray");
