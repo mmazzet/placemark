@@ -2,6 +2,7 @@ import { aboutController } from "./controllers/about-controller.js";
 import { accountsController } from "./controllers/accounts-controller.js";
 import { dashboardController } from "./controllers/dashboard-controller.js";
 import { countryController } from "./controllers/country-controller.js";
+import { marketController } from "./controllers/market-controller.js";
 
 export const webRoutes = [
   { method: "GET", path: "/", config: accountsController.index },
@@ -20,6 +21,9 @@ export const webRoutes = [
   { method: "GET", path: "/country/{id}", config: countryController.index },
   { method: "POST", path: "/country/{id}/addmarket", config: countryController.addMarket },
   { method: "GET", path: "/country/{id}/deletemarket/{marketid}", config: countryController.deleteMarket },
+
+  { method: "GET", path: "/market/{id}/editmarket/{marketid}", config: marketController.index },
+  { method: "POST", path: "/market/{id}/updatemarket/{marketid}", config: marketController.update },
 
   { method: "GET", path: "/showaccountdetails/{id}", config: accountsController.showAccountDetails },
   { method: "POST", path: "/updateaccountdetails/{id}", config: accountsController.updateAccountDetails },
