@@ -53,7 +53,8 @@ export const sampleMarket = {
   title: "Fiera di Sinigaglia",
   description: "The oldest flea market in Milan",
   latitude: 45.4641,
-  longitude: 9.1919
+  longitude: 9.1919,
+  category: "Vintage Clothes"
 };
 
 export const portugal = {
@@ -67,18 +68,21 @@ export const testMarkets = [
     title: "East Market Milano",
     description: "Renowned market held in Milan",
     latitude: 45.4551,
-    longitude: 9.1805
+    longitude: 9.1805,
+    category: "Vintage Clothes"
   },
   {
     title: "Mercatino dell'antiquariato di Brera",
     description: "Renowned market held in Milan",
     latitude: 45.4387,
-    longitude: 9.1886
+    longitude: 9.1886,
+    category: "Antiques"
   },
   {
     title: "Mercatone Antiquariato Naviglio Grande",
     description: "Renowned market held in Milan",
     latitude: 40.4155,
-    longitude: 3.7074
+    longitude: 3.7074,
+    category: "Antiques"
   }
 ]

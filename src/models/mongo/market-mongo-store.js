@@ -45,6 +45,7 @@ export const marketMongoStore = {
     marketDoc.description = updatedMarket.description;
     marketDoc.latitude = updatedMarket.latitude;
     marketDoc.longitude = updatedMarket.longitude;
+    marketDoc.category = updatedMarket.category;
     await marketDoc.save();
   },
 };

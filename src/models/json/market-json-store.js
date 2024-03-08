@@ -60,6 +60,7 @@ export const marketJsonStore = {
     market.description = updatedMarket.description;
     market.latitude = updatedMarket.latitude;
     market.longitude = updatedMarket.longitude;
+    market.category = updatedMarket.category;
     await db.write();
   },
 };

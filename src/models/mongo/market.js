@@ -7,6 +7,7 @@ const marketSchema = new Schema({
   description: String,
   latitude: Number,
   longitude: Number,
+  category: String,
   countryid: {
     type: Schema.Types.ObjectId,
     ref: "Placemark",

@@ -27,6 +27,7 @@ export const MarketSpec = Joi.object()
     description: Joi.string().example("Renowned market held in Milan").required(),
     latitude: Joi.number().allow("").optional().example("45.4551"),
     longitude: Joi.number().allow("").optional().example("9.1805"),
+    category: Joi.string().example("Antiques").required(),
     countryid: IdSpec,
   })
   .label("Market");

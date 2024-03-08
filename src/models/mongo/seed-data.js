@@ -55,6 +55,7 @@ export const seedData = {
       description: "Popular open-air flea market in Madrid",
       latitude: 40.408623,
       longitude: -3.707338,
+      category: "Mixed",
       countryid: "->countries.country_1"
     },
     market_2 : {
@@ -62,6 +63,7 @@ export const seedData = {
       description: "The oldest flea market in Milan",
       latitude: 45.45033,
       longitude: 9.16827,
+      category: "Vintage Clothes",
       countryid: "->countries.country_2"
     },
     market_3 : {
@@ -69,6 +71,7 @@ export const seedData = {
       description: "The largest of its kind in Paris",
       latitude: 48.901472,
       longitude: 2.343795,
+      category: "Antiques",
       countryid: "->countries.country_3"
     },
     market_4 : {
@@ -76,6 +79,7 @@ export const seedData = {
       description: "Lisbon's most iconic market",
       latitude: 38.71539,
       longitude: -9.12593,
+      category: "Bric-a-brac",
       countryid: "->countries.country_4"
     },
     market_5 : {
@@ -83,6 +87,7 @@ export const seedData = {
       description: "One of the most historical flea markets in Berlin",
       latitude: 52.51667,
       longitude: 13.4,
+      category: "Mixed",
       countryid: "->countries.country_5"
     },
     market_6 : {
@@ -90,6 +95,7 @@ export const seedData = {
       description: "One of the largest weekly flea market in Belgium.",
       latitude: 50.78192324831175,
       longitude:  5.469787913493849,
+      category: "Antiques",
       countryid: "->countries.country_6"
     },
   },
