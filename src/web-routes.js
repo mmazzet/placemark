@@ -30,6 +30,7 @@ export const webRoutes = [
   { method: "GET", path: "/deleteaccount/{id}", config: accountsController.deleteAccount },
 
   { method: "POST", path: "/country/{id}/uploadimage", config: countryController.uploadImage },
+  { method: "GET", path: "/country/{id}/deleteimage", config: countryController.deleteImage },
 
   { method: "GET", path: "/{param*}", handler: { directory: { path: "./public" } }, options: { auth: false } }
 

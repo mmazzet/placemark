@@ -67,4 +67,30 @@ export const countryController = {
       parse: true,
     },
   },
+
+  // deleteImage: {
+  //   handler: async function (request, h) {
+  //     const country = await db.countryStore.getCountryById(request.params.id);
+  //     country.img = null;
+  //     await imageStore.deleteImage(country.img);
+  //     return h.redirect(`/country/${country._id}`);
+  //   },
+  // },
+
+  deleteImage: {
+    handler: async function (request, h) {
+      try {
+        const country = await db.countryStore.getCountryById(request.params.id);
+        if (country.img) {
+          await imageStore.deleteImage(country.img);
+        }
+        country.img = null;
+        await db.countryStore.updateCountry(country);
+        return h.redirect(`/country/${country._id}`);
+      } catch (err) {
+        console.log(err);
+        return h.redirect(`/country/${country._id}`);
+      }
+    },
+  },
 };

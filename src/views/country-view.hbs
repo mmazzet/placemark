@@ -1,22 +1,32 @@
 {{> menu}}
 
-{{!-- <section class="section">
-  <div class="title">
-    {{country.title}}
-  </div>
-  {{> list-markets}}
-  {{> add-market}}
-</section> --}}
-
-<section class="section columns is-vcentered">
-  <div class="column has-text-centered">
-    <div class="title">
-      {{country.title}}
+<div class="title mt-5">
+  {{country.title}}
+</div>
+<section class="section">
+  <div class="columns is-vcentered">
+    <div class="column is-two-thirds">
+      {{> list-markets}}
     </div>
-    {{> list-markets}}
-    {{> add-market}}
-  </div>
-  <div class="column">
-    {{> country-image }}
+    <div class="column">
+      <div class="columns is-multiline">
+        <div class="column is-full">
+          {{> add-market}}
+        </div>
+        <div class="column is-full mt-3">
+          {{> country-image}}
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+

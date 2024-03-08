@@ -21,6 +21,12 @@
         <button type="submit" class="button is-info">Upload</button>
       </div>
     </form>
+
+    {{#if country.img}}
+    <form action="/country/{{country._id}}/deleteimage" method="GET">
+      <button type="submit" class="button is-danger mt-3">Delete Image</button>
+    </form>
+    {{/if}}
   </div>
 </div>
 
