@@ -15,18 +15,6 @@ export const marketController = {
     },
   },
 
-  showMarketDetails: {
-    handler: async function (request, h) {
-      const loggedInUser = request.auth.credentials;
-      const user = await db.userStore.getUserById(loggedInUser._id);
-      const viewData = {
-        title: "Market Details",
-        user: user,
-      };
-      return h.view("update-market-view", viewData);
-    },
-  },
-
   update: {
     validate: {
       payload: MarketSpec,
