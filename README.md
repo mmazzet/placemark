@@ -1,6 +1,7 @@
-<h1 align="center">Welcome to Flea Markets in Europe 👋</h1>
+<h1 align="center">Welcome to Placemark 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.7.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-0.10-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/node-%3E%3D16-blue.svg" />
   <a href="#" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
   </a>
@@ -8,18 +9,9 @@
 
 > Placemark: a Hapi/node application for managing Flea Markets Placemarks. Create lists of flea markets you want to visit around Europe and save information for each of them.
 
-## Tools used
-- node.js
-- Bulma
-- Handlebars
-- Hapi
-- Joi
-- Chai
-- Mocha
+## Prerequisites
 
-## Screenshots
-
-## Deployment
+- node >=16
 
 ## Install
 
