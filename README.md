@@ -7,7 +7,7 @@
   </a>
 </p>
 
-> Placemark: a Hapi/node application for managing Flea Markets as Placemarks. Create lists of flea markets you want to visit around Europe and save information for each of them.
+> Placemark: a Hapi/node application for managing Flea Markets as Placemarks. Create lists of flea markets you want to visit around the world and save information for each of them.
 
 ## Tools used
 - node.js
@@ -27,10 +27,18 @@
 - TEMP: https://placemark-a1-mmazzet.onrender.com/dashboard
 
 ## Features
-- Users can create an account, modify details and delete the account
+- Users can create an account, modify details and delete the account.
 - Users can add and delete countries and view them in their dashboard. 
-- Users can add and delete markets. For each market they can add the name, the description, latitude, longitude and category information.
+- Users can add and delete flea markets. For each flea market they can add the name, the description, latitude, longitude and category information.
 - Users can update their profile and delete the account.
+
+- Validation: Joi Schemas used for Sign Up, Log in, Add Country and Add Market
+- Unit Tests: Mocha used for tests on user, country and market
+- Storage: MongoDB and Studio 3T. Mongoose seeder for preloaded objects
+- Image storage: Cloudinary 
+- API documentation: HapiSwagger to document users, countries and markets endpoints
+- API security: hapi authentication strategies JWT
+
 
 
 ## Prerequisites
