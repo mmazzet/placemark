@@ -1,38 +1,35 @@
+{{> menu}}
+
 <div class="container">
   <div class="columns is-centered">
     <div class="column is-half">
-      <div class="box has-background-info">
+      <div class="box has-background-link-light">
         <form action="/market/{{country._id}}/updatemarket/{{market._id}}" method="POST">
-          <h2 class="title is-4 has-text-white">Update Market Details:</h2>
-          
+          <h2 class="title is-4">Update Market Details:</h2>        
           <div class="field">
             <label class="label">Market Name</label>
             <div class="control">
               <input class="input is-medium" type="text" placeholder="Enter Market Name" name="title", value="{{market.title}}">
             </div>
           </div>
-
           <div class="field">
             <label class="label">Description</label>
             <div class="control">
               <input class="input is-medium" type="text" placeholder="Enter Description" name="description", value="{{market.description}}">
             </div>
           </div>
-
           <div class="field">
             <label class="label">Latitude</label>
             <div class="control">
               <input class="input is-medium" type="text" placeholder="Enter Latitude" name="latitude", value="{{market.latitude}}">
             </div>
           </div>
-
           <div class="field">
             <label class="label">Longitude</label>
             <div class="control">
               <input class="input is-medium" type="text" placeholder="Enter Longitude" name="longitude", value="{{market.longitude}}">
             </div>
           </div>
-
           <div class="field">
             <label class="label">Category</label>
             <div class="control">
@@ -47,10 +44,9 @@
               </div>
             </div>
           </div>
-
           <div class="field is-grouped">
             <div class="control">
-              <button class="button is-primary is-medium">Update Market</button>
+              <button class="button is-primary is-link">Update Market</button>
             </div>
           </div>
         </form>

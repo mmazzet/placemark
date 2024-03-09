@@ -2,7 +2,7 @@
   {{#each country.markets}}
     <div class="column is-one-third">
       <div class="card">
-        <div class="card-content">
+        <div class="card-content has-background-link-light">
           <div class="content">
             <p><strong>Market:</strong> {{title}}</p>
             <p><strong>Description:</strong></p>
@@ -13,7 +13,7 @@
           </div>
         </div>
         <footer class="card-footer">
-          <a href="/market/{{../country._id}}/editmarket/{{_id}}" class="card-footer-item button is-info">
+          <a href="/market/{{../country._id}}/editmarket/{{_id}}" class="card-footer-item button is-link">
             <span class="icon">
               <i class="fas fa-edit"></i>
             </span>

@@ -1,25 +1,32 @@
 {{> menu}}
-
 <div class="title mt-5">
   {{country.title}}
 </div>
-<section class="section">
-  <div class="columns is-vcentered">
-    <div class="column is-two-thirds">
-      {{> list-markets}}
-    </div>
-    <div class="column">
-      <div class="columns is-multiline">
-        <div class="column is-full">
-          {{> add-market}}
-        </div>
-        <div class="column is-full mt-3">
-          {{> country-image}}
-        </div>
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-8">
+    <div class="tile">
+      <div class="tile is-parent">
+        <article class="tile is-child">
+          {{> list-markets}}
+        </article>
       </div>
     </div>
   </div>
-</section>
+  <div class="tile is-parent">
+    <article class="tile is-child">
+      <div class="content">
+        <div class="content">
+          {{> add-market}}
+        </div>
+        <div class="content">
+          {{> country-image}}
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+
 
 
 

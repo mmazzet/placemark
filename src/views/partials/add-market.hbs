@@ -1,57 +1,53 @@
-<div class="container">
-  <div class="columns is-centered">
-    {{!-- <div class="column is-half"> --}}
-      <div class="box has-background-info">
-        <form action="/country/{{country._id}}/addmarket" method="POST">
-          <h2 class="title is-4 has-text-white">Enter Market Details:</h2>          
-          <div class="field">
-            <label class="label">Market Name</label>
-            <div class="control">
-              <input class="input is-medium" type="text" placeholder="Enter Market Name" name="title">
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Description</label>
-            <div class="control">
-              <input class="input is-medium" type="text" placeholder="Enter Description" name="description">
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Latitude</label>
-            <div class="control">
-              <input class="input is-medium" type="text" placeholder="Enter Latitude" name="latitude">
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Longitude</label>
-            <div class="control">
-              <input class="input is-medium" type="text" placeholder="Enter Longitude" name="longitude">
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Category</label>
-            <div class="control">
-              <div class="select is-medium">
-                <select name="category">
-                  <option>Select Category</option>
-                  <option value="Antiques">Antiques</option>
-                  <option value="Vintage Clothes">Vintage Clothes</option>
-                  <option value="Brick-a-Brac">Brick-a-Brac</option>
-                  <option value="Mixed">Mixed</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="field is-grouped">
-            <div class="control">
-              <button class="button is-primary is-medium">Add Market</button>
-            </div>
-          </div>
-        </form>
+{{!-- <div class="container"> --}}
+  <div class="box has-background-link-light">
+    <form action="/country/{{country._id}}/addmarket" method="POST">
+      <h2 class="title is-4">Enter Market Details:</h2>          
+      <div class="field">
+        <label class="label">Market Name</label>
+        <div class="control">
+          <input class="input is-medium" type="text" placeholder="Enter Market Name" name="title">
+        </div>
       </div>
-    {{!-- </div> --}}
+      <div class="field">
+        <label class="label">Description</label>
+        <div class="control">
+          <input class="input is-medium" type="text" placeholder="Enter Description" name="description">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Latitude</label>
+        <div class="control">
+          <input class="input is-medium" type="text" placeholder="Enter Latitude" name="latitude">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Longitude</label>
+        <div class="control">
+          <input class="input is-medium" type="text" placeholder="Enter Longitude" name="longitude">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Category</label>
+        <div class="control">
+          <div class="select is-medium">
+            <select name="category">
+              <option>Select Category</option>
+              <option value="Antiques">Antiques</option>
+              <option value="Vintage Clothes">Vintage Clothes</option>
+              <option value="Brick-a-Brac">Brick-a-Brac</option>
+              <option value="Mixed">Mixed</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link is-medium">Add Market</button>
+        </div>
+      </div>
+    </form>
   </div>
-</div>
+{{!-- </div> --}}
 
 
 
