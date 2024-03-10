@@ -21,13 +21,13 @@
           <div class="field">
             <label class="label">Latitude</label>
             <div class="control">
-              <input class="input is-medium" type="text" placeholder="Enter Latitude" name="latitude", value="{{market.latitude}}">
+              <input class="input is-medium" type="number" placeholder="Enter Latitude" name="latitude", value="{{market.latitude}}", min="-90.00000000", max="90.0000000">
             </div>
           </div>
           <div class="field">
             <label class="label">Longitude</label>
             <div class="control">
-              <input class="input is-medium" type="text" placeholder="Enter Longitude" name="longitude", value="{{market.longitude}}">
+              <input class="input is-medium" type="number" placeholder="Enter Longitude" name="longitude", value="{{market.longitude}}", min="-180.00000000", max="180.0000000">
             </div>
           </div>
           <div class="field">
