@@ -23,8 +23,8 @@
 - Swagger
 
 ## Deployment
-- TEMP: https://invented-feather-rhythm.glitch.me/
-- TEMP: https://placemark-a1-mmazzet.onrender.com/dashboard
+- Glitch: https://placemark-a1-mmazzet.glitch.me/ 
+- Render: https://placemark-a1-mmazzet.onrender.com
 
 ## Features
 - Users can create an account, modify details and delete the account.
