@@ -35,8 +35,8 @@ const swaggerOptions = {
 
 async function init() {
   const server = Hapi.server({
-    port: 3000,
-    host: "localhost",
+    port: process.env.PORT || 3000,
+    host: "0.0.0.0",
   });
 
   await server.register(Inert);
@@ -100,7 +100,7 @@ process.on("unhandledRejection", (err) => {
 const result = dotenv.config();
 if (result.error) {
   console.log(result.error.message);
-  process.exit(1);
+  // process.exit(1);
 }
 
 init();
